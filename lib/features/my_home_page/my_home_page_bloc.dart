@@ -4,7 +4,8 @@ import 'package:test_work/domain/notifications_settings.dart';
 import 'package:test_work/features/my_home_page/my_home_page.dart';
 
 abstract base class MyHomePageBloc extends State<MyHomePage> {
-  AppNotificationSettings _notificationSettings = AppNotificationSettings();
+  final AppNotificationSettings _notificationSettings =
+      AppNotificationSettings();
 
   Rv<bool> rvIsLoading = Rv<bool>(false);
   bool get isLoading => rvIsLoading.value;
